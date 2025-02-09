@@ -23,4 +23,15 @@ jmp $
 
 
 Se siguió este tutorial para la creación del system call https://www.youtube.com/watch?v=Kn6D7sH7Fts    
-Se siguó este tutorial para la instalación de qemu en windows https://www.youtube.com/watch?v=HywXtRz0URE
+Se siguó este tutorial para la instalación de qemu en windows https://www.youtube.com/watch?v=HywXtRz0URE   
+
+--- 
+
+-**¿Qué ha modificado aquí, la interfaz de llamadas de sistema o el API? Justifique su respuesta.**  
+No se modificó el API, lo que se modificó fue la interfaz de llamada al sistema porque lo que se hizo fue agregar una llamada más syscall para modificar el Kernel. No se modificó librerias que corresponden a la API, como lo es glibc.  
+
+-**¿Por qué usamos el número de nuestra llamada de sistema en lugar de su nombre?**  
+Porque el Kernel no reconoce nombres de los procesos, funciona unicamente con los números como parámetro e identificador, además es más fácil de ubicar por número.   
+
+-**¿Por qué las llamadas de sistema existentes como read o fork se pueden llamar por nombre?**  
+Porque la libreria glibc actua como un intermediario 
